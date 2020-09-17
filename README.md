@@ -1,4 +1,4 @@
-# A WhatsOnChain API JS Wrapper library fro Bitcoin SV Developer
+# A WhatsOnChain API JS Wrapper library for Bitcoin SV Developer
 
 [![NPM version](http://img.shields.io/npm/v/whatsonchain.svg)](https://www.npmjs.org/package/whatsonchain)
 [![Build Status](https://secure.travis-ci.org/baryon/whatsonchain.png)](http://travis-ci.org/baryon/whatsonchain)
