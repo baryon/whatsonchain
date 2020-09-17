@@ -1,8 +1,6 @@
 # A WhatsOnChain API JS Wrapper library fro Bitcoin SV Developer
 
 [![NPM version](http://img.shields.io/npm/v/whatsonchain.svg)](https://www.npmjs.org/package/whatsonchain)
-[![Dependency Status](https://david-dm.org/baryon/whatsonchain.svg)](https://david-dm.org/baryon/whatsonchain)
-[![devDependency Status](https://david-dm.org/baryon/whatsonchain/dev-status.svg)](https://david-dm.org/baryon/tracer#info=devDependencies)
 [![Build Status](https://secure.travis-ci.org/baryon/whatsonchain.png)](http://travis-ci.org/baryon/whatsonchain)
 
 https://whatsonchain.com/
