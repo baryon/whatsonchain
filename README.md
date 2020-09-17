@@ -11,7 +11,7 @@ https://developers.whatsonchain.com/
 
 ## Sample Usage
 
-Check out these [test code](test) in JavaScript and TypeScript to get up and running quickly.
+Check out these [test code](https://github.com/baryon/whatsonchain/tree/master/test) in JavaScript and TypeScript to get up and running quickly.
 
 # License
 

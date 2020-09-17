@@ -1,6 +1,6 @@
 {
   "name": "whatsonchain",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": {
     "name": "Li Long",
     "email": "lilong@chainbow.io"
@@ -17,6 +17,11 @@
   "files": [
     "src/*"
   ],
+  "homepage": "http://github.com/baryon/whatsonchain",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/baryon/whatsonchain.git"
+  },
   "scripts": {
     "lint": "eslint --fix --ext .js src",
     "test": "NODE_ENV=test mocha"
