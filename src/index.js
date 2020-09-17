@@ -1,5 +1,5 @@
 const axios = require( "axios" );
-const API_ROOT = "https://api.whatsonchain.com/v1/bsv/"
+const API_ROOT = "https://api.whatsonchain.com/v1/bsv"
 
 class WhatsOnChain {
   /**
@@ -38,11 +38,9 @@ class WhatsOnChain {
       // console.warn( error.response.headers )
       throw new Error( error.response.data )
     } else if ( error.request ) {
-      // 服务器连不上
       // console.warn( error.message )
       throw new Error( error.message )
     } else {
-      // 返回200，API返回详细错误信息
       // console.warn( 'Error', error )
       throw error
     }
