@@ -163,7 +163,7 @@ describe( 'WhatsOnChain', async () => {
     const woc = new WhatsOnChain( 'main' )
     const result = await woc.merkleProof( 'c1d32f28baa27a376ba977f6a8de6ce0a87041157cef0274b20bfda2b0d8df96' )
 
-    console.log( result )
+    console.log( result, result[ 0 ].branches )
     assert.isArray( result );
     assert.equal( result[ 0 ].merkleRoot, '95a920b1002bed05379a0d2650bb13eb216138f28ee80172f4cf21048528dc60' );
 
@@ -328,6 +328,27 @@ describe( 'WhatsOnChain', async () => {
 
     console.log( result )
     assert.isObject( result );
+
+  } ).timeout( 300000 )
+
+  it( 'Rate Limits 3r/s', async () => {
+    const woc = new WhatsOnChain( 'testnet' )
+    console.time( 'rate-limited' );
+    for ( let i = 0; i < 20; i++ ) {
+      const result = await woc.blockHeight( i + 10000 )
+      assert.isObject( result );
+    }
+    console.timeEnd( 'rate-limited' ); //12389.494ms
+  } ).timeout( 300000 )
+
+  it( 'ApiKey', async () => {
+    const woc = new WhatsOnChain( 'testnet', { apiKey: 'your api key' } )
+    console.time( 'apikey' );
+    for ( let i = 0; i < 20; i++ ) {
+      const result = await woc.blockHeight( i + 10000 )
+      assert.isObject( result );
+    }
+    console.timeEnd( 'apikey' );//10545.773ms
 
   } ).timeout( 300000 )
 

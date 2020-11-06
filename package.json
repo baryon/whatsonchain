@@ -1,9 +1,10 @@
 {
   "name": "whatsonchain",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "author": {
     "name": "Li Long",
-    "email": "lilong@chainbow.io"
+    "email": "lilong@gmail.com",
+    "homepage": "https://lilong.net"
   },
   "description": "A WhatsOnChain API JS Wrapper library",
   "keywords": [
@@ -27,18 +28,19 @@
     "test": "NODE_ENV=test mocha"
   },
   "dependencies": {
-    "axios": "^0.20.0"
+    "axios": "^0.21.0",
+    "axios-extensions": "^3.1.3"
   },
   "devDependencies": {
     "chai": "^4.2.0",
-    "eslint": "^7.8.1",
-    "eslint-config-standard": "^14.1.1",
+    "eslint": "^7.12.1",
+    "eslint-config-standard": "^16.0.1",
     "eslint-plugin-mocha": "^8.0.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.1.1",
-    "eslint-plugin-standard": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.2",
     "lodash": "^4.17.20",
-    "mocha": "^8.1.3",
+    "mocha": "^8.2.1",
     "reify": "^0.20.12"
   }
 }
