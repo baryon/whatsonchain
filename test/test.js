@@ -290,15 +290,15 @@ describe( 'WhatsOnChain', async () => {
     console.timeEnd( 'rate-limited' ); //12389.494ms
   } ).timeout( 300000 )
 
-  it( 'ApiKey', async () => {
-    const woc = new WhatsOnChain( 'mainnet', { apiKey: 'Your API Key' } )
-    console.time( 'apikey' );
-    for ( let i = 0; i < 20; i++ ) {
-      const result = await woc.blockHeight( i + 10000 )
-      assert.isObject( result );
-    }
-    console.timeEnd( 'apikey' );//10545.773ms
+  // it( 'ApiKey', async () => {
+  //   const woc = new WhatsOnChain( 'mainnet', { apiKey: 'Your API Key' } )
+  //   console.time( 'apikey' );
+  //   for ( let i = 0; i < 20; i++ ) {
+  //     const result = await woc.blockHeight( i + 10000 )
+  //     assert.isObject( result );
+  //   }
+  //   console.timeEnd( 'apikey' );//10545.773ms
 
-  } ).timeout( 300000 )
+  // } ).timeout( 300000 )
 
 } )

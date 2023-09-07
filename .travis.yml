@@ -1,9 +1,11 @@
 language: node_js
 node_js:
-  - 10
-  - 11
-  - 12
-  - 13
+  - 14
+  - 15
+  - 16
+  - 18
+  - 19
+  - 20
 
 matrix:
   include:
