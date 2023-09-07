@@ -7,7 +7,7 @@ https://whatsonchain.com/
 
 ## Documentation
 
-https://developers.whatsonchain.com/
+https://docs.taal.com/core-products/whatsonchain
 
 ## Install
 
@@ -22,6 +22,10 @@ npm install whatsonchain --save
 Check out these [test code](https://github.com/baryon/whatsonchain/tree/master/test) in JavaScript and TypeScript to get up and running quickly.
 
 ## History
+
+### 0.3.0
+- Move to Taal new document
+- Added some new apis
 
 ### 0.2.0
 - Support Cache, default is true. if you don't want cache, set option `{ enableCache: false }`
@@ -41,4 +45,4 @@ Check out these [test code](https://github.com/baryon/whatsonchain/tree/master/t
 
 # License
 
-It is released under the terms of the Open BSV license.
+It is released under the terms of the MIT license.

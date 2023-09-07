@@ -89,20 +89,6 @@ describe( 'WhatsOnChain', async () => {
     }
   } ).timeout( 300000 )
 
-
-
-  it( 'bulkBroadcast', async () => {
-    const woc = new WhatsOnChain( 'main' )
-    const rawHex = require( './upload.json' ).rawHex
-    try {
-      const result = await woc.bulkBroadcast( [ rawHex, rawHex ], true )
-      console.log( result )
-
-    } catch ( e ) {
-      console.log( e )
-    }
-  } ).timeout( 300000 )
-
   it( 'bulkTxDetails', async () => {
     const woc = new WhatsOnChain( 'main' )
     const result = await woc.bulkTxDetails( [ "294cd1ebd5689fdee03509f92c32184c0f52f037d4046af250229b97e0c8f1aa", "91f68c2c598bc73812dd32d60ab67005eac498bef5f0c45b822b3c9468ba3258" ] )
@@ -123,18 +109,7 @@ describe( 'WhatsOnChain', async () => {
 
   } ).timeout( 300000 )
 
-
-  it( 'receipt', async () => {
-    const woc = new WhatsOnChain( 'main' )
-
-    const result = await woc.receiptPDF( '4bdbdb7483c1c7ef48cda78ee4141af7cf15f94e10324e0bcac43c29394ea4a9' )
-    //console.log( result )
-
-    assert.isTrue( result.indexOf( '%PDF' ) === 0 );
-
-  } ).timeout( 300000 )
-
-
+ 
   it( 'getRawTxData', async () => {
     const woc = new WhatsOnChain( 'main' )
 
@@ -228,18 +203,6 @@ describe( 'WhatsOnChain', async () => {
   } ).timeout( 300000 )
 
 
-
-  it( 'statementPDF', async () => {
-    const woc = new WhatsOnChain( 'main' )
-
-    const result = await woc.statementPDF( '16ZqP5Tb22KJuvSAbjNkoiZs13mmRmexZA' )
-    //console.log( result )
-
-    assert.isTrue( result.indexOf( '%PDF' ) === 0 );
-
-  } ).timeout( 300000 )
-
-
   it( 'historyByScriptHash', async () => {
     const woc = new WhatsOnChain( 'main' )
     const result = await woc.historyByScriptHash( '995ea8d0f752f41cdd99bb9d54cb004709e04c7dc4088bcbbbb9ea5c390a43c3' )
@@ -265,41 +228,27 @@ describe( 'WhatsOnChain', async () => {
     const result = await woc.exchangeRate()
 
     console.log( result )
-    assert.isObject( result );
+    assert.isArray( result );
 
   } ).timeout( 300000 )
 
 
-  it( 'feeQuotes', async () => {
+  it( 'minerBlocksStats', async () => {
     const woc = new WhatsOnChain( 'main' )
-    const result = await woc.feeQuotes()
+    const result = await woc.minerBlocksStats(30)
 
     console.log( result )
-    assert.isObject( result );
+    assert.isArray( result );
 
   } ).timeout( 300000 )
 
 
-
-  it( 'submitTx', async () => {
+  it( 'GetOPReturnByTxHash', async () => {
     const woc = new WhatsOnChain( 'main' )
-    const rawHex = require( './upload.json' ).rawHex
-    try {
-      const result = await woc.submitTx( 'ba001df8', rawHex )
-      console.log( result )
-
-    } catch ( e ) {
-      console.log( e )
-    }
-  } ).timeout( 300000 )
-
-
-  it( 'txStatus', async () => {
-    const woc = new WhatsOnChain( 'main' )
-    const result = await woc.txStatus( 'ab398390', '294cd1ebd5689fdee03509f92c32184c0f52f037d4046af250229b97e0c8f1aa' )
+    const result = await woc.GetOPReturnByTxHash( '7426d28358988dec6d470e3ef6b5b18ad7979014097cf119e245f98ec80edbc7' )
 
     console.log( result )
-    assert.isObject( result );
+    assert.isArray( result );
 
   } ).timeout( 300000 )
 
@@ -342,7 +291,7 @@ describe( 'WhatsOnChain', async () => {
   } ).timeout( 300000 )
 
   it( 'ApiKey', async () => {
-    const woc = new WhatsOnChain( 'testnet', { apiKey: 'your api key' } )
+    const woc = new WhatsOnChain( 'mainnet', { apiKey: 'Your API Key' } )
     console.time( 'apikey' );
     for ( let i = 0; i < 20; i++ ) {
       const result = await woc.blockHeight( i + 10000 )
