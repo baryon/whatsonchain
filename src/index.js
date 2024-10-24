@@ -275,7 +275,7 @@ class WhatsOnChain {
  * https://docs.taal.com/core-products/whatsonchain/transaction#bulk-transaction-status
  * @param {Array} txidArray 
  */
-  bulkTxDetails ( txidArray ) {
+  bulkTxStatus ( txidArray ) {
     return this._post( `txs/status`, {
       txids: txidArray
     } )
